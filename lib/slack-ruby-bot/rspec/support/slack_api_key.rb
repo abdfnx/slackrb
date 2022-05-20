@@ -1,7 +1,10 @@
 # frozen_string_literal: true
+require 'botwayrb'
 
 RSpec.configure do |config|
+  bw = Botwayrb::Core.new
+
   config.before :each do
-    ENV['SLACK_API_TOKEN'] ||= 'test'
+    bw.get_token ||= 'test'
   end
 end

@@ -83,14 +83,14 @@ See [CHANGELOG](CHANGELOG.md) for a history of changes and [UPGRADING](UPGRADING
 ```ruby
 source 'https://rubygems.org'
 
-gem 'slack-ruby-bot'
+gem 'slackrb'
 gem 'async-websocket', '~>0.8.0'
 ```
 
 #### pongbot.rb
 
 ```ruby
-require 'slack-ruby-bot'
+require 'slackrb'
 
 class PongBot < SlackRubyBot::Bot
   command 'ping' do |client, data, match|

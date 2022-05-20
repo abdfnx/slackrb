@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'botwayrb'
 
 module SlackRubyBot
   class App < Server
@@ -15,10 +16,10 @@ module SlackRubyBot
 
     def self.configure!
       SlackRubyBot.configure do |config|
-        config.token = ENV['SLACK_API_TOKEN'] if ENV.key?('SLACK_API_TOKEN')
-        raise('Missing Slack API Token.') unless config.token.present?
+        bw = Botwayrb::Core.new
 
-        config.aliases = ENV['SLACK_RUBY_BOT_ALIASES'].split(' ') if ENV.key?('SLACK_RUBY_BOT_ALIASES')
+        config.token = bw.get_token
+        raise('Missing Slack API Token.') unless config.token.present?
       end
       Slack.configure do |config|
         config.token = SlackRubyBot.config.token

@@ -2,6 +2,8 @@
 
 source 'http://rubygems.org'
 
+gem 'botwayrb'
+
 gemspec
 
 if ENV.key?('CONCURRENCY')
