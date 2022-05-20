@@ -90,7 +90,7 @@ gem 'async-websocket', '~>0.8.0'
 #### pongbot.rb
 
 ```ruby
-require 'slackrb'
+require 'slack-ruby-bot'
 
 class PongBot < SlackRubyBot::Bot
   command 'ping' do |client, data, match|

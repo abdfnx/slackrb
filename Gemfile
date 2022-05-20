@@ -2,7 +2,7 @@
 
 source 'http://rubygems.org'
 
-gem 'botwayrb'
+gem 'botwayrb', '>=0.3.0'
 
 gemspec
 
